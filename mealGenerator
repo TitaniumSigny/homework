@@ -1,0 +1,68 @@
+const menu = {
+
+  _courses: {
+    appetizers: [],
+    mains: [],
+    desserts: []
+  },
+
+  get appetizers() {},
+
+  set appetizers(input) {},
+
+  get mains() {},
+
+  set mains(input) {},
+
+  get desserts() {},
+
+  set desserts(input) {},
+
+  get courses() {
+    return {
+      appetizers: this.appetizers,
+      mains: this.mains,
+      desserts: this.desserts,
+    }
+  },
+
+  addDishToCourse(courseName, dishName, dishPrice) {
+    let dish = {
+      name: dishName,
+      price: dishPrice
+    };
+    this._courses[courseName].push(dish);
+  },
+
+  getRandomDishFromCourse(courseName) {
+    let dishes = this._courses[courseName];
+    return dishes[Math.floor(Math.random()*dishes.length)];
+  },
+
+  generateRandomMeal() {
+    let appetizer = this.getRandomDishFromCourse('appetizers');
+    let main = this.getRandomDishFromCourse('mains');
+    let dessert = this.getRandomDishFromCourse('desserts');
+
+    return `Appetizer: ${appetizer.name} (${appetizer.price})\n
+    Main: ${main.name} (${main.price})\n
+    Dessert: ${dessert.name} (${dessert.price})\n
+    Total: \$` + (appetizer.price + main.price + dessert.price);
+  }
+
+};
+
+menu.addDishToCourse('appetizers', 'calamari', 9);
+menu.addDishToCourse('appetizers', 'potato skins', 5);
+menu.addDishToCourse('appetizers', 'potstickers', 6);
+
+menu.addDishToCourse('mains', 'swedish meatballs', 10);
+menu.addDishToCourse('mains', 'general tsos chicken', 12);
+menu.addDishToCourse('mains', 'sea bass', 15);
+
+menu.addDishToCourse('desserts', 'baked alaska', 7);
+menu.addDishToCourse('desserts', 'banana split', 5);
+menu.addDishToCourse('desserts', 'pumpkin pie', 6);
+
+let meal = menu.generateRandomMeal();
+console.log(meal);
