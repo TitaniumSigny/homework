@@ -1,0 +1,9 @@
+// count overused words in a block of text (that's been split into array of words -- betterWords) without relying on a set overusedWords array length
+
+for (let i = 0; i < overusedWords.length; i++) {
+  let wordCount = 0;
+  betterWords.forEach(function(word) {
+      if(word === overusedWords[i]) {wordCount++;}
+  })
+  overusedWordCounts.push(wordCount);
+}
