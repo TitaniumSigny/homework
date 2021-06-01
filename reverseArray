@@ -1,0 +1,10 @@
+// puts the elements of an array in reverse order
+function reverseArray(array) {
+
+  let outputArray = [];
+
+  for (let i = (array.length - 1); i > -1; i--) {
+    outputArray.push(array[i]);
+  }
+  return outputArray;
+}
