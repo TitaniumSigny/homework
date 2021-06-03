@@ -1,0 +1,6 @@
+// filters array1 to only items that are also in array2
+
+function justCoolStuff(array1, array2) {
+
+  return array1.filter(item => array2.includes(item));
+}
