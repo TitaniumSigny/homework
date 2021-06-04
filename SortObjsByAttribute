@@ -1,0 +1,15 @@
+const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', numTeeth:42}, {speciesName:'alligator', numTeeth:80}, {speciesName:'human', numTeeth:32}];
+
+function sortSpeciesByTeeth(array) {
+  return array.sort(dentistDroid)
+}
+
+function dentistDroid(a,b) {
+  if (a.numTeeth < b.numTeeth) {
+    return -1
+  }
+  else if (a.numTeeth > b.numTeeth) {
+    return 1
+  }
+else return 0
+}
