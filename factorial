@@ -1,0 +1,8 @@
+function factorial(n) {
+  let ans = n;
+  while (n > 1) {
+    ans = ans * (n-1);
+    n--;
+  }
+  return ans;
+}
