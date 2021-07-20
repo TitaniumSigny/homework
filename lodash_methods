@@ -8,6 +8,23 @@ clamp(number, LowerBound, UpperBound) {
     return UpperBound;
   }
   else return number;
-}
+},
+
+inRange(number, StartValue, EndValue) {
+  if (!EndValue) {
+    // if EndValue is undefined
+    EndValue = StartValue;
+    StartValue = 0;
+  }
+  if (StartValue > EndValue) {
+    let box = EndValue;
+    EndValue = StartValue;
+    StartValue = box;
+  }
+  if ( (number >= StartValue) && (number < EndValue)) {
+    return true;
+  }
+  else return false;
+},
 
 };
