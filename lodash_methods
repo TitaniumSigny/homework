@@ -1,0 +1,13 @@
+let _ = {
+
+clamp(number, LowerBound, UpperBound) {
+  if (number < LowerBound) {
+    return LowerBound;
+  }
+  else if (number > UpperBound) {
+    return UpperBound;
+  }
+  else return number;
+}
+
+};
