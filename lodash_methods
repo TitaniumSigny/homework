@@ -27,4 +27,35 @@ inRange(number, StartValue, EndValue) {
   else return false;
 },
 
+words(TheString) {
+  let array = TheString.split(' ');
+  return array;
+},
+
+pad(TheString, length) {
+  if (TheString.length >= length) {
+    return TheString;
+  }
+  numSpacesFore = Math.floor((length - TheString.length) / 2);
+  numSpacesAft = length - TheString.length - numSpacesFore;
+  let outputString = ' '.repeat(numSpacesFore).concat(TheString).concat(' '.repeat(numSpacesAft));
+  return outputString;
+},
+
+has(obj, attr) {
+  if (obj[attr]) {
+    return true;
+  }
+  else return false;
+},
+
+invert(obj) {
+  let newObj = {};
+  for(let item in obj) {
+    const originalValue = obj[item];
+    newObj[originalValue] = item;
+  }
+  return newObj;
+}
+
 };
