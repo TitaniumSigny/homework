@@ -56,6 +56,14 @@ invert(obj) {
     newObj[originalValue] = item;
   }
   return newObj;
-}
+},
+
+findKey(obj, func) {
+  for (let key in obj) {
+    if (func(obj[key])) {return key};
+  }
+  return undefined;
+},
+// more efficient than the provided answer!
 
 };
