@@ -66,4 +66,10 @@ findKey(obj, func) {
 },
 // more efficient than the provided answer!
 
+drop(array, num) {
+  if (typeof num == 'undefined') {num = 1}
+  let newArray = array.slice(num);
+  return newArray;
+},
+
 };
