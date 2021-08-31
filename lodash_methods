@@ -72,4 +72,14 @@ drop(array, num) {
   return newArray;
 },
 
+dropWhile(array, func) {
+  let dropNum = array.findIndex(function(element, index) {
+    return !func(element, index, array);
+  });
+  if (dropNum > 0) {
+    return this.drop(array, dropNum);
+  }
+  else return array;
+},
+
 };
