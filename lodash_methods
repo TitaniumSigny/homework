@@ -82,4 +82,17 @@ dropWhile(array, func) {
   else return array;
 },
 
+chunk(array, size) {
+  if (!size) {
+    size = 1;
+  }
+  let arrayBox = [];
+
+  while(array.length > size) {
+    arrayBox.push(array.splice(0, size));
+  }
+  arrayBox.push(array);
+  return arrayBox;
+},
+
 };
