@@ -32,7 +32,20 @@ const testBatchValid = [valid1, valid2, valid3, valid4, valid5];
 
 const testBatchInvalid = [invalid1, invalid2, invalid3, invalid4, invalid5];
 
+// test of a string CCnum
+
+const stringCCnum = "4539404967869666";
+
 // Add your functions below:
+
+function arrayify(aCCnum) {
+  // convert a string CCnum to an array of integers CCnum
+  return Array.from(aCCnum, x => parseInt(x, 10));
+}
+
+/*
+console.log(arrayify(stringCCnum));
+*/
 
 function validateCred(array) {
   // populate an array to work with
