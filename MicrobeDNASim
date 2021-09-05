@@ -1,0 +1,61 @@
+// Returns a random DNA base
+const returnRandBase = () => {
+  const dnaBases = ['A', 'T', 'C', 'G']
+  return dnaBases[Math.floor(Math.random() * 4)] 
+}
+
+// Returns a random single stand of DNA containing 15 bases
+const mockUpStrand = () => {
+  const newStrand = []
+  for (let i = 0; i < 15; i++) {
+    newStrand.push(returnRandBase())
+  }
+  return newStrand
+}
+
+function pAequorFactory(critterSN, DNAarray) {
+  return {
+    specimenNum: critterSN,
+    dna: DNAarray,
+    mutate() {
+      let spot = Math.floor(Math.random() * 15);
+      let oldBase = this.dna[spot];
+      let newBase = returnRandBase();
+      while (newBase == oldBase) {
+        // make sure it's not the same thing
+        newBase = returnRandBase();
+      }
+      this.dna[spot] = newBase;
+      return this.dna;
+    },
+    compareDNA(otherCritter) {
+      let c = 0; // number of commonalities
+      for (let i = 0; i < 15; i++) {
+        //console.log(this.dna[i]);
+        
+        if (this.dna[i] == otherCritter.dna[i]) {
+          c++;
+        }
+        
+      }
+      console.log("Specimen " + this.specimenNum + " and specimen " + otherCritter.specimenNum + " have " + Math.round((c/15)*100) + "% DNA in common.");
+    },
+  }
+}
+
+//test
+let testMicrobe = pAequorFactory(Math.floor(Math.random()*1000), mockUpStrand());
+console.log("Specimen " + testMicrobe.specimenNum);
+console.log(testMicrobe.dna);
+
+/* mutate test
+console.log("mutate");
+testMicrobe.mutate();
+console.log(testMicrobe.dna);
+*/
+
+let otherMicrobe = pAequorFactory(Math.floor(Math.random()*1000), mockUpStrand());
+console.log("Specimen " + otherMicrobe.specimenNum);
+console.log(otherMicrobe.dna);
+
+testMicrobe.compareDNA(otherMicrobe);
