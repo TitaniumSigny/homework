@@ -1,0 +1,28 @@
+body {
+  background-color: #f1daf9;
+}
+
+p {
+  color: #5a0492;
+  font-size: 20px;
+}
+
+table, th, td {
+  border: 2px solid;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th {
+  font-size: 20px;
+}
+
+td {
+  font-size: 18px;
+}
+
+.code {
+  font-family: Courier;
+  background-color: #9567b3;
+  color: #f1daf9;
+}
