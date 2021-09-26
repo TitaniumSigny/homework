@@ -1,0 +1,67 @@
+<html>
+<head>
+  <title>Semantic HTML Reference</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Semantic HTML Tags Reference</h1>
+  <p>The semantic HTML tags make various parts of the page explicit and easier to identify for both human and software readers, as opposed div tags with potentially arbitrary or unclear class or id names.</p>
+  <table>
+    <tr>
+      <th>Tag</th>
+      <th>Name</th>
+      <th>Usage</th>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;header&gt;</span></td>
+      <td>Header</td>
+      <td>Note the heading section of the page, such as title and logo, page navigation, subtitle, abstract, byline, etc.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;footer&gt;</span></td>
+      <td>Footer</td>
+      <td>Identify the header section at the bottom, for author bios, copyright notices, disclaimers, references and external links, etc.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;article&gt;</span></td>
+      <td>Article</td>
+      <td>Denote a complete article on the page, which could be useful if the article will be republished elsewhere or if there are multiple articles on the page.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;section&gt;</span></td>
+      <td>Section</td>
+      <td>Marks off a section of the page, or of an Article, so that they can be styled or referred to without using div tags.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;aside&gt;</span></td>
+      <td>Aside</td>
+      <td>To separate out a small amount of content that is tangentially related, such as a "Also check out...", a related news item, or an ad.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;nav&gt;</span></td>
+      <td>Nav</td>
+      <td>Denote the (or an) area that contains navigation links.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;time&gt;</span></td>
+      <td>Time and Date</td>
+      <td>Used to include a machine-readable time and date stamp when relative time language is being used, such as "yesterday", "last month", etc. Use the attribute "datetime" and the format 'year-month-day [24hr time] [time zone as hours from GMT]'</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;address&gt;</span></td>
+      <td>Address</td>
+      <td>Points out a contact email address. Not for use with a postal address.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;figure&gt;</span></td>
+      <td>Figure</td>
+      <td>Sets off a Figure, such as a diagram, picture, graph, code sample, etc.</td>
+    </tr>
+    <tr>
+      <td><span class="code">&lt;figcaption&gt;</span></td>
+      <td>Caption</td>
+      <td>Creates a caption for an associated Figure.</td>
+    </tr>
+  </table>
+</body>
+</html>
